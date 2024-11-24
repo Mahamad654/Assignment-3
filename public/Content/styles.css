@@ -3,6 +3,27 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+h1{
+  color: azure !important;
+}
+.homepage-title{
+  margin-right: 55%;
+  position: absolute;
+  top: 8rem !important;
+  left: 10rem;
+}
+.navbar-brand{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+
+}
+.me-2{
+  border-radius: 10px !important;
+}
+
+label{
+  color: white;
+}
 
 a {
   color: #00B7FF;
@@ -14,7 +35,11 @@ a {
   width: 60% !important;
 }
 .row{
-  margin-left: 15% !important;
+  margin-left: 8% !important;
+}
+.form-group{
+  background-color: black;
+  border-radius: 5%;
 }
 
 .edit-btn{
@@ -31,5 +56,19 @@ a {
   margin-left: 40%;
 
 }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .splash-image {
+        background-image: url('/Assets/images/splash-img.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        height: 95vh;
+
+      } 
 
 /* <!important> --- priortize this style over bootstrap style*/ 

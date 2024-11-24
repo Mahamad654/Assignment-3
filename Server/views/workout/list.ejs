@@ -1,5 +1,6 @@
 <%- include ../Partials/header.ejs %>
 <%- include ../Partials/main_nav.ejs %>
+
 <div class="background-image">
   
 
@@ -50,12 +51,13 @@
 
                 <td class="delete-btn text-center col-1.1">
                     <form action="/Tracker/delete/<%= WorkoutList[count]._id%>">
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger delete-link">Delete</button>
                     </form>
                 </td>
                 <% } %>
             </tr>
             <% } %>
+
             </table>
             <% if(typeof displayName == 'string' && displayName) { %>
                 <a href="/Tracker/add" class="btn add btn-primary text-center col-3"
@@ -65,4 +67,6 @@
         </div>
     </div>
 </main>
+
+
 <%- include ../Partials/footer.ejs %>

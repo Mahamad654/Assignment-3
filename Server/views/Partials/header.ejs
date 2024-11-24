@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/Content/styles.css' />
-    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="@fortawesome/fontawesome-free/css/all.min.css">
-    <script src="/Script/styles.js"></script>
-    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <div class="splash-image">
-  
 
-      <style>
-        *{
-          margin: 0;
-          padding: 0;
-        }
-    
-        .splash-image{
-          background-image: url('/Assets/images/splash-img.jpg');
-          background-size: cover;
-          background-repeat: no-repeat;
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/Content/styles.css' />
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="@fortawesome/fontawesome-free/css/all.min.css">
+  <script src="/Script/styles.js"></script>
+  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
 
-          height: 90vh;
-    
-        }
-      </style>
+<body>
+  <div class="splash-image container-fluid">
+
+    <style>
+
+      .splash-container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        background-color:transparent ;
+
+      }
+
+      .splash-button {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+        border-radius: 5px;
+        position: absolute;
+        left: 15rem !important;
+        bottom: 15rem !important;
+      }
+    </style>
