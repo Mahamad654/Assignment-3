@@ -1,0 +1,35 @@
+body {
+
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+a {
+  color: #00B7FF;
+}
+.col-2{
+  width: 12.5% !important;
+}
+.col-md-10{
+  width: 60% !important;
+}
+.row{
+  margin-left: 15% !important;
+}
+
+.edit-btn{
+  background-color: transparent !important;
+
+}
+
+.delete-btn{
+  background-color: transparent!important;
+  margin-top: 10px;
+}
+
+.add{
+  margin-left: 40%;
+
+}
+
+/* <!important> --- priortize this style over bootstrap style*/ 

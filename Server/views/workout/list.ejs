@@ -1,0 +1,68 @@
+<%- include ../Partials/header.ejs %>
+<%- include ../Partials/main_nav.ejs %>
+<div class="background-image">
+  
+
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+  
+      .background-image{
+        background-image: url('/Assets/images/background-img.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+  
+        height: 100vh;
+  
+      }
+    </style>
+
+<main class="container-fluid">
+    <div class="row">
+        <div class="col-md-10">
+            <h1><%= title %></h1>
+        <table class ="table table-bordered table-striped table-hover">
+            <!-- Table header -->
+            <tr class="d-flex">
+                <th class="text-center col-3">Exercise</th>
+                <th class="text-center col-2">Date</th>
+                <th class="text-center col-1"># Sets</th>
+                <th class="text-center col-1"># Reps</th>
+                <th class="text-center col-2">Weight (Lbs)</th>
+                <th class="text-center col-5">Notes</th>
+            </tr>
+            <% for(let count=0; count<WorkoutList.length;count++) {%>
+            <tr class="d-flex">
+                    <td class="text-center col-3"><%= WorkoutList[count].Exercise %></td>
+                    <td class="text-center col-2"><%= WorkoutList[count].Date %></td>
+                    <td class="text-center col-1"><%= WorkoutList[count].Sets %></td>
+                    <td class="text-center col-1"><%= WorkoutList[count].Reps %></td>
+                    <td class="text-center col-2"><%= WorkoutList[count].Weight%></td>
+                    <td class="text-center col-5"><%= WorkoutList[count].Notes %></td>
+                
+                <% if(typeof displayName == 'string' && displayName) { %>
+                <td class="edit-btn text-center col-1">
+                    <a href="/Tracker/edit/<%= WorkoutList[count]._id%>"
+                    class="btn btn-primary">
+                    <i class="fas fa-pencil-alt"></i>Edit</a></td>
+
+                <td class="delete-btn text-center col-1.1">
+                    <form action="/Tracker/delete/<%= WorkoutList[count]._id%>">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+                <% } %>
+            </tr>
+            <% } %>
+            </table>
+            <% if(typeof displayName == 'string' && displayName) { %>
+                <a href="/Tracker/add" class="btn add btn-primary text-center col-3"
+                role="button" ><i class="fas fa-plus-circle"></i>Add Workout</a>
+            <% } %>
+            
+        </div>
+    </div>
+</main>
+<%- include ../Partials/footer.ejs %>
